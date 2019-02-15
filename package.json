@@ -12,6 +12,7 @@
     "mocha": "^5.2.0",
     "selenium-standalone": "^6.15.4",
     "wdio-mocha-framework": "^0.6.4",
+    "wdio-selenium-standalone-service": "0.0.12",
     "webdriverio": "^4.13.2"
   }
 }
