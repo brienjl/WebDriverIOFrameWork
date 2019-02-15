@@ -36,6 +36,7 @@ Make sure selenium-standalone is running. It can be started by openning your com
 
 Open the WebDriverIOFramework folder in another command line window and run
 > node loginPortalTest.js
+
 > node contactUsTest.js
 
 [WebDriverIO]: https://www.npmjs.com/package/@shackijj/webdriverio
