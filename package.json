@@ -1,0 +1,16 @@
+{
+  "name": "webdriverioframework",
+  "version": "1.0.0",
+  "description": "WebDriver IO Framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jeremy Lawrence Brien",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^5.2.0",
+    "selenium-standalone": "^6.15.4",
+    "webdriverio": "^4.13.2"
+  }
+}
