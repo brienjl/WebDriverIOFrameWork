@@ -43,4 +43,3 @@ Open the WebDriverIOFramework folder in another command line window and run
 [Mocha]: https://www.npmjs.com/package/mocha
 [Install Java]: https://www.java.com/en/download/help/download_options.xml
 [open this URL]: http://127.0.0.1:4444/wd/hub/static/resource/hub.html
-
