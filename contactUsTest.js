@@ -4,7 +4,7 @@ var client = webdriverio.remote(options);
 
 client
     .init()
-    .setViewPortsize({
+    .setViewportSize({
         width: 1200,
         height: 800
     })
