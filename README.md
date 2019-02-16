@@ -41,6 +41,8 @@ Running Test Cases requires the following command:
 
 > npm test -- --logLevel=verbose
 
+> npm test -- --spec=tests/webdriverUniversity.js
+
 [8.12.0]: http://nodejs.org/dist/v8.12.0/
 [WebDriverIO]: https://www.npmjs.com/package/@shackijj/webdriverio
 [Mocha]: https://www.npmjs.com/package/mocha
