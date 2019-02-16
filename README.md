@@ -39,6 +39,8 @@ Make sure selenium-standalone is running. It can be started by openning your com
 Running Test Cases requires the following command:
 > npm test
 
+> npm test -- --logLevel=verbose
+
 [8.12.0]: http://nodejs.org/dist/v8.12.0/
 [WebDriverIO]: https://www.npmjs.com/package/@shackijj/webdriverio
 [Mocha]: https://www.npmjs.com/package/mocha

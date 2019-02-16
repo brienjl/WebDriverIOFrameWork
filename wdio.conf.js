@@ -1,4 +1,10 @@
-var baseUrl = 'http://www.webdriveruniversity.com'
+var baseUrl;
+
+if(process.env.SERVER === 'prod') {
+        baseUrl = 'https://www.google.com';
+    } else {
+        baseUrl = "http://www.webdriveruniversity.com";
+    }
 
 exports.config = {
     
@@ -245,4 +251,4 @@ exports.config = {
      */
     // onComplete: function(exitCode, config, capabilities) {
     // }
-}
+};
