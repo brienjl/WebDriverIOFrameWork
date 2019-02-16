@@ -33,14 +33,11 @@ I've found that the latest version of Nodejs has issues installing and generatin
 
 In the browser, navigate to [open this URL] -- It is your local host running on port 4444
 
-### 6. Run a Test Case
+### 6. Run Test Case
 Make sure selenium-standalone is running. It can be started by openning your command line from the node_modules/.bin folder and executing
-> selenium-standalone start
 
-Open the WebDriverIOFramework folder in another command line window and run
-> node loginPortalTest.js
-
-> node contactUsTest.js
+Running Test Cases requires the following command:
+> npm test
 
 [8.12.0]: http://nodejs.org/dist/v8.12.0/
 [WebDriverIO]: https://www.npmjs.com/package/@shackijj/webdriverio
