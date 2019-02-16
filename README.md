@@ -2,6 +2,9 @@
 
 ## Creating a new WebDriveIOFramework
 
+### Nodejs Version
+I've found that the latest version of Nodejs has issues installing and generating the wdio.conf.js -- the version I'm using for this project is Nodejs [8.12.0].
+
 ### 1. Create a package.json file 
 > npm init
 
@@ -39,6 +42,7 @@ Open the WebDriverIOFramework folder in another command line window and run
 
 > node contactUsTest.js
 
+[8.12.0]: http://nodejs.org/dist/v8.12.0/
 [WebDriverIO]: https://www.npmjs.com/package/@shackijj/webdriverio
 [Mocha]: https://www.npmjs.com/package/mocha
 [Install Java]: https://www.java.com/en/download/help/download_options.xml
