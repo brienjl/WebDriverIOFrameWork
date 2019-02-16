@@ -11,9 +11,9 @@
   "devDependencies": {
     "mocha": "^5.2.0",
     "selenium-standalone": "^6.15.4",
-    "wdio-dot-reporter": "file:node_modules/wdio-dot-reporter",
-    "wdio-mocha-framework": "file:node_modules/wdio-mocha-framework",
-    "wdio-selenium-standalone-service": "file:node_modules/wdio-selenium-standalone-service",
+    "wdio-dot-reporter": "0.0.10",
+    "wdio-mocha-framework": "^0.6.4",
+    "wdio-selenium-standalone-service": "0.0.12",
     "webdriverio": "^4.13.2"
   }
 }
