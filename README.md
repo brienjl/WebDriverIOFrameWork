@@ -17,7 +17,11 @@ I've found that the latest version of Nodejs has issues installing and generatin
 * Documentation can be found here [Mocha].
 > npm install -save-dev mocha@latest
 
-### 4. Add Selenium Standalone Server Dependencies
+### 4. Add Chai Dependencies
+* Documentation can be found here [Chai].
+> npm install -save-dev chai@latest
+
+### 5. Add Selenium Standalone Server Dependencies
 * Requires Java 8 or greater [Install Java]
 
 > npm install -save-dev selenium-standalone@latest
@@ -26,14 +30,14 @@ I've found that the latest version of Nodejs has issues installing and generatin
 
 > selenium-standalone install
 
-### 5. Confirm Selenium Standalone Server installed Correctly
+### 6. Confirm Selenium Standalone Server installed Correctly
 > cd ./node_modules/.bin
 
 > selenium-standalone start
 
 In the browser, navigate to [open this URL] -- It is your local host running on port 4444
 
-### 6. Run Test Case
+### 7. Run Test Case
 Make sure selenium-standalone is running. It can be started by openning your command line from the node_modules/.bin folder and executing
 
 Running Test Cases requires the following command:
@@ -46,5 +50,6 @@ Running Test Cases requires the following command:
 [8.12.0]: http://nodejs.org/dist/v8.12.0/
 [WebDriverIO]: https://www.npmjs.com/package/@shackijj/webdriverio
 [Mocha]: https://www.npmjs.com/package/mocha
+[Chai]: https://www.npmjs.com/package/chai
 [Install Java]: https://www.java.com/en/download/help/download_options.xml
 [open this URL]: http://127.0.0.1:4444/wd/hub/static/resource/hub.html
