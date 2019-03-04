@@ -21,8 +21,11 @@ I've found that the latest version of Nodejs has issues installing and generatin
 * Documentation can be found here [Chai].
 > npm install -save-dev chai@latest
 
-### 5. Add Selenium Standalone Server Dependencies
-* Requires Java 8 or greater [Install Java]
+### 5. Add JSON Server Dependencies
+JSON Server allows us to quickly mock an api with test data [JSON]
+
+### 6. Add Selenium Standalone Server Dependencies
+* Requires Java 8 or greater [Java]
 
 > npm install -save-dev selenium-standalone@latest
  
@@ -30,14 +33,14 @@ I've found that the latest version of Nodejs has issues installing and generatin
 
 > selenium-standalone install
 
-### 6. Confirm Selenium Standalone Server installed Correctly
+### 7. Confirm Selenium Standalone Server installed Correctly
 > cd ./node_modules/.bin
 
 > selenium-standalone start
 
 In the browser, navigate to [open this URL] -- It is your local host running on port 4444
 
-### 7. Run Test Case
+### 8. Run Test Case
 Make sure selenium-standalone is running. It can be started by openning your command line from the node_modules/.bin folder and executing
 
 Running Test Cases requires the following command:
@@ -51,5 +54,6 @@ Running Test Cases requires the following command:
 [WebDriverIO]: https://www.npmjs.com/package/@shackijj/webdriverio
 [Mocha]: https://www.npmjs.com/package/mocha
 [Chai]: https://www.npmjs.com/package/chai
-[Install Java]: https://www.java.com/en/download/help/download_options.xml
+[JSON]: https://github.com/typicode/json-server
+[Java]: https://www.java.com/en/download/help/download_options.xml
 [open this URL]: http://127.0.0.1:4444/wd/hub/static/resource/hub.html
