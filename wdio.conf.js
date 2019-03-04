@@ -1,10 +1,11 @@
 var baseUrl;
 var timeout = process.env.DEBUG ? 99999999 : 10000;
 
+
 if(process.env.SERVER === 'prod') {
         baseUrl = 'https://www.google.com';
     } else {
-        baseUrl = "http://www.webdriveruniversity.com";
+        baseUrl = "http://qc/";
     }
 
 exports.config = {
