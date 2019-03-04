@@ -22,9 +22,15 @@ I've found that the latest version of Nodejs has issues installing and generatin
 > npm install -save-dev chai@latest
 
 ### 5. Add JSON Server Dependencies
-JSON Server allows us to quickly mock an api with test data [JSON]
+* JSON Server allows us to quickly mock an api with test data [JSON]
+> npm install -save-dev json-server
 
-### 6. Add Selenium Standalone Server Dependencies
+### 6. Add RobotJS Dependencies
+* Add the RobotJS framework because sometimes you just need simple mouse and keyboard control [RobotJS]
+> npm install -save-dev robotjs
+> json-server --watch db.json
+
+### 7. Add Selenium Standalone Server Dependencies
 * Requires Java 8 or greater [Java]
 
 > npm install -save-dev selenium-standalone@latest
@@ -33,14 +39,14 @@ JSON Server allows us to quickly mock an api with test data [JSON]
 
 > selenium-standalone install
 
-### 7. Confirm Selenium Standalone Server installed Correctly
+### 8. Confirm Selenium Standalone Server installed Correctly
 > cd ./node_modules/.bin
 
 > selenium-standalone start
 
 In the browser, navigate to [open this URL] -- It is your local host running on port 4444
 
-### 8. Run Test Case
+### 9. Run Test Case
 Make sure selenium-standalone is running. It can be started by openning your command line from the node_modules/.bin folder and executing
 
 Running Test Cases requires the following command:
@@ -55,5 +61,6 @@ Running Test Cases requires the following command:
 [Mocha]: https://www.npmjs.com/package/mocha
 [Chai]: https://www.npmjs.com/package/chai
 [JSON]: https://github.com/typicode/json-server
+[RobotJS]: https://github.com/octalmage/robotjs
 [Java]: https://www.java.com/en/download/help/download_options.xml
 [open this URL]: http://127.0.0.1:4444/wd/hub/static/resource/hub.html
