@@ -23,7 +23,7 @@ describe("Verify the Tasks Hamburger and Links to MVC work correctly", function(
         expect(title).to.equal('EnterpriseHR');
     });
 
-    it("Check that we can Navigate to Add Record Tab", function(done) {
+    it("Check that each 'Task' in Angular Navigates to the correct MVC Link", function(done) {
         //Expected URLs 
         storedUrls[0] = testUrl + "/Hierarchy/GetDashboardInfo";
         storedUrls[1] = testUrl + "/Training/TrainingIndex?tabIndex=0";
@@ -49,7 +49,7 @@ describe("Verify the Tasks Hamburger and Links to MVC work correctly", function(
             // We will Loop though each Task by dynamically changing the xpath
             var taskItemSelector = "//mat-sidenav-container/mat-sidenav//mat-nav-list[@role='navigation']/div[" + (i + 1) + "]";
             browser.click(taskItemSelector);
-            browser.pause(7000);
+            browser.pause(1000);
             
             //Capture the URL in the Browser -- it should be the MVC's URL
             capturedUrls[i] = browser.getUrl();
@@ -57,8 +57,10 @@ describe("Verify the Tasks Hamburger and Links to MVC work correctly", function(
             //Assert that what we captured is what we expeceted
             expect(capturedUrls[i]).to.equal(storedUrls[i]);
             
-            //Assert the page is returning a 200 status
+            //TODO: Assert the page is returning a 200 status
             console.log(browser.status());
+
+            browser.back();
         }
     });
 });
