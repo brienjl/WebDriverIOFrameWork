@@ -1,28 +1,30 @@
 var robot = require("robotjs");
 
 describe("Verify the Tasks Hamburger and Links to MVC work correctly", function() {
-   
+    var testUrl = 'http://qc/eHR_Warehouse';
+    var capturedUrls = [];
+    var storedUrls = [];
+    var length = 8;
+    var hamburgerSelector = "//app-root/mat-toolbar/button[@class='mat-icon-button']//mat-icon[@role='img']";
+
     it("Check that the browser opens correctly", function(done) {
         browser.setViewportSize({
             width: 1200,
             height: 800
     });
         browser.url('/enterprisehr/requisitions');
+        //deal with the QC cert popup in chrome
         robot.keyTap('tab');
         robot.keyTap('tab');
         robot.keyTap('tab');
         robot.keyTap('enter');
+
         var title = browser.getTitle();
         expect(title).to.equal('EnterpriseHR');
-        console.log('Title is: ' + title);
     });
 
     it("Check that we can Navigate to Add Record Tab", function(done) {
-        var testUrl = 'http://qc/eHR_Warehouse';
-        var capturedUrls = [];
-        var length = 8;
-
-        var storedUrls = [];
+        //Expected URLs 
         storedUrls[0] = testUrl + "/Hierarchy/GetDashboardInfo";
         storedUrls[1] = testUrl + "/Training/TrainingIndex?tabIndex=0";
         storedUrls[2] = testUrl + "/Hierarchy/MissingReportsTo";
@@ -32,16 +34,31 @@ describe("Verify the Tasks Hamburger and Links to MVC work correctly", function(
         storedUrls[6] = testUrl + "/Hierarchy/PendingApprovalsDivisions";
         storedUrls[7] = testUrl + "/Hierarchy/RoleManagement";
 
-
         browser.url('/enterprisehr/requisitions');
         
+        // Loop Logic: Check the Task Buttons and get the URLs from the MVC Application
+        // 1. Click each "Task" button in the Hamburger
+        // 2. Get the URL from the MVC Application
+        // 3. Check the status of the page given the captured URL
+        // 4. Save the MVC Url to CatpuredUrls[]
+        // 5. Go back to the Angular App and Repeat the loop
         for (i = 0; i < length; i++){
-            browser.click('/html/body/app-root/mat-toolbar/button/span/mat-icon');
+            browser.click(hamburgerSelector);
             browser.pause(1000);
-            var taskItem = "body > app-root > mat-sidenav-container > mat-sidenav > div > mat-nav-list > div:nth-child(" + (i + 2) + ") > a > div";
-            browser.click(taskItem);
-            browser.pause(5000);
-        }
 
+            // We will Loop though each Task by dynamically changing the xpath
+            var taskItemSelector = "//mat-sidenav-container/mat-sidenav//mat-nav-list[@role='navigation']/div[" + (i + 1) + "]";
+            browser.click(taskItemSelector);
+            browser.pause(7000);
+            
+            //Capture the URL in the Browser -- it should be the MVC's URL
+            capturedUrls[i] = browser.getUrl();
+
+            //Assert that what we captured is what we expeceted
+            expect(capturedUrls[i]).to.equal(storedUrls[i]);
+            
+            //Assert the page is returning a 200 status
+            console.log(browser.status());
+        }
     });
 });
