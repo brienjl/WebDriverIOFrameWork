@@ -1,5 +1,5 @@
 var baseUrl;
-var timeout = process.env.DEBUG ? 99999999 : 30000;
+var timeout = process.env.DEBUG ? 99999999 : 60000;
 
 
 if(process.env.SERVER === 'prod') {
