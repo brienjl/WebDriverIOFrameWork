@@ -6,69 +6,61 @@
 
 I've found that the latest version of Nodejs has issues installing and generating the wdio.conf.js -- the version I'm using for this project is Nodejs [8.12.0].
 
-### 1. Create a package.json file
+### Initial Install
 
-> npm init
+* First, Install the project dependencies from package.json
 
-### 2. Add WebDriverIO Dependencies
+> npm install
+
+* Second, make sure Java 8 or above is installed (see section 7 for link). Once Java is installed, you can use the selenium standalone server. Install with the following commands.
+
+> npm install -save-dev selenium-standalone@latest
+>
+> cd ./node_modules
+>
+> ./.bin/selenium-standalone install
+
+* Third, ensure the selenium-standalone server is working correctly with the following:
+
+> cd ./node_modules
+>
+> ./.bin/selenium-standalone start
+
+* In the browser, navigate to [open this URL] -- It is your local host running on port 4444
+
+### 1. WebDriverIO Dependencies
 
 * Documentation can be found here [WebDriverIO].
 * Version 4.13.2 is used -- @latest version has known issues with sync and recognizing init()
 
-> npm install -save-dev webdriverio@^4.13.2
-
-### 3. Add Mocha Dependencies
+### 2. Mocha Dependencies
 
 * Documentation can be found here [Mocha].
 
-> npm install -save-dev mocha@latest
-
-### 4. Add Chai Dependencies
+### 3 Add Chai Dependencies
 
 * Documentation can be found here [Chai].
 
-> npm install -save-dev chai@latest
-
-### 5. Add JSON Server Dependencies
+### 4. JSON Server Dependencies
 
 * JSON Server allows us to quickly mock an api with test data [JSON]
 
-> npm install -save-dev json-server
+* The following command can be run to spin up the json server. It will automatically create a db.json with mock data if it doesn't already exist. Feel free to add test data here.
 
-### 6. Add RobotJS Dependencies
-
-* Add the RobotJS framework because sometimes you just need simple mouse and keyboard control [RobotJS]
-
-> npm install -save-dev robotjs
 > json-server --watch db.json
 
-### 7. Add Selenium Standalone Server Dependencies
+### 6. RobotJS Dependencies
+
+* I added the RobotJS framework because sometimes you just need simple mouse and keyboard control [RobotJS]
+
+### 7. Selenium Standalone Server Dependencies
 
 * Requires Java 8 or greater [Java]
 
-> npm install -save-dev selenium-standalone@latest
->
-> cd ./node_modules/.bin
->
-> selenium-standalone install
-
-### 8. Confirm Selenium Standalone Server installed Correctly
-
-> cd ./node_modules/.bin
->
-> selenium-standalone start
-
-In the browser, navigate to [open this URL] -- It is your local host running on port 4444
-
-### 9. Run Test Case
-
-Make sure selenium-standalone is running. It can be started by openning your command line from the node_modules/.bin folder and executing
+### Running Test Cases
 
 Running Test Cases requires the following command:
-> npm test
->
-> npm test -- --logLevel=verbose
->
+
 > npm test -- --spec=tests/webdriverUniversity.js
 
 [8.12.0]: http://nodejs.org/dist/v8.12.0/
