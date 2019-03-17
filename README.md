@@ -28,6 +28,12 @@ I've found that the latest version of Nodejs has issues installing and generatin
 
 * In the browser, navigate to [open this URL] -- It is your local host running on port 4444
 
+* Finally, Configure the WDIO Configuration File - it may need to be reconfigured on first install (WebDriverIO)
+
+>./node_modules/.bin/wdio
+>
+>
+
 ### 1. WebDriverIO Dependencies
 
 * Documentation can be found here [WebDriverIO].
@@ -49,11 +55,11 @@ I've found that the latest version of Nodejs has issues installing and generatin
 
 > json-server --watch db.json
 
-### 6. RobotJS Dependencies
+### 5. RobotJS Dependencies
 
 * I added the RobotJS framework because sometimes you just need simple mouse and keyboard control [RobotJS]
 
-### 7. Selenium Standalone Server Dependencies
+### 6. Selenium Standalone Server Dependencies
 
 * Requires Java 8 or greater [Java]
 

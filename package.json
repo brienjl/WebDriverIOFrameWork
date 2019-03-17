@@ -4,7 +4,7 @@
   "description": "WebDriver IO Framework",
   "main": "index.js",
   "scripts": {
-    "test": "wdio; json-server --watch db.json"
+    "test": "wdio"
   },
   "author": "Jeremy Lawrence Brien",
   "license": "ISC",
@@ -14,10 +14,11 @@
     "mocha": "^5.2.0",
     "robotjs": "^0.5.1",
     "selenium-standalone": "^6.16.0",
+    "wdio": "^3.0.3",
     "wdio-dot-reporter": "0.0.10",
     "wdio-mocha-framework": "^0.6.4",
     "wdio-selenium-standalone-service": "0.0.12",
     "wdio-spec-reporter": "^0.1.5",
-    "webdriverio": "^4.13.2"
+    "webdriverio": "^4.14.3"
   }
 }

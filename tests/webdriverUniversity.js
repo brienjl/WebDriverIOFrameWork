@@ -4,7 +4,7 @@ describe("Verify whether webdriveruniversity link on homepage works correctly", 
                 width: 1200,
                 height: 800
         });
-            browser.url('/');
+            browser.url('http://webdriveruniversity.com');
             var title = browser.getTitle();
             expect(title).to.equal('WebDriverUniversity.com');
             console.log('Title is: ' + title);
@@ -23,7 +23,7 @@ describe("Verify whether webdriveruniversity link on homepage works correctly", 
         });
 
         it("Check that the login button opens the login portal page", function(done) {
-            browser.url('/');
+            browser.url('http://webdriveruniversity.com');
             var title = browser.getTitle();
             title.should.equal('WebDriverUniversity.com');
             console.log('Title is: ' + title);
